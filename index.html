@@ -46,12 +46,12 @@
                     <p>Please fill the form below to get in touch with us.</p>
 
                     <input type="text" name="name" placeholder="Name" required />
-                    <select name="service_time" required>
+                    <!-- <select name="service_time" required>
                         <option value="" disabled selected>Preferred Service Time</option>
                         <option value="Morning">Morning</option>
                         <option value="Afternoon">Afternoon</option>
                         <option value="Evening">Evening</option>
-                    </select>
+                    </select> -->
                     <input type="tel" name="phone" placeholder="Phone number" required />
                     <input type="email" name="email" placeholder="E-mail address" required />
                     <textarea name="message" rows="3" placeholder="Your message" required></textarea>
@@ -176,7 +176,7 @@
             </div>
         </div>
         <div class="btn-container">
-            <button class="button">CHOOSE YOU SERVICES</button>
+            <button class="button" onclick="openModal()">CHOOSE YOU SERVICES</button>
         </div>
 
     </section>
@@ -297,7 +297,7 @@
         </div>
 
         <div class="btn-container">
-            <button class="button">Hear From Us</button>
+            <button class="button" onclick="openModal()">Hear From Us</button>
         </div>
     </section>
 
@@ -505,12 +505,12 @@
                 <p>Please fill the form below to get in touch with us.</p>
 
                 <input type="text" name="name" placeholder="Name" required />
-                <select name="service_time" required>
+                <!-- <select name="service_time" required>
                     <option value="" disabled selected>Preferred Service Time</option>
                     <option value="Morning">Morning</option>
                     <option value="Afternoon">Afternoon</option>
                     <option value="Evening">Evening</option>
-                </select>
+                </select> -->
                 <input type="tel" name="phone" placeholder="Phone number" required />
                 <input type="email" name="email" placeholder="E-mail address" required />
                 <textarea name="message" rows="4" placeholder="Your message" required></textarea>
@@ -562,6 +562,62 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- modal -->
+     <!-- Modal -->
+<div class="textinokmail-modal textinokmail-hidden" id="textinokmail-modal">
+  <div class="textinokmail-form-box">
+    <span class="textinokmail-close-btn" onclick="closeModal()">&times;</span>
+    <h2>Send Us a Message</h2>
+    <p>Please fill the form below to get in touch with us.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="phone" placeholder="Phone number" required />
+      <input type="email" name="email" placeholder="E-mail address" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<!-- Auto Popup -->
+<div class="textinokmail-popup textinokmail-hidden" id="textinokmail-popup">
+  <div class="textinokmail-form-box">
+    <span class="textinokmail-close-btn" onclick="closePopup()">&times;</span>
+    <h2>Send Us a Message</h2>
+    <p>Please fill the form below to get in touch with us.</p>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="text" name="phone" placeholder="Phone number" required />
+      <input type="email" name="email" placeholder="E-mail address" required />
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">SUBMIT</button>
+    </form>
+  </div>
+</div>
+
+<script>
+  // Auto-popup after 5 seconds
+  setTimeout(() => {
+    document.getElementById('textinokmail-popup').classList.remove('textinokmail-hidden');
+  }, 5000);
+
+  function closePopup() {
+    document.getElementById('textinokmail-popup').classList.add('textinokmail-hidden');
+  }
+
+  function openModal() {
+    document.getElementById('textinokmail-modal').classList.remove('textinokmail-hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('textinokmail-modal').classList.add('textinokmail-hidden');
+  }
+</script>
+
 
 
 
