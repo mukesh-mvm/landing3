@@ -448,6 +448,41 @@
 
 
 
+    <!-- testinomail -->
+     <section class="textinokmail-section">
+    <h2> <span class="highlight-our">Why</span>  Families Trust Us</h2>
+  </section>
+
+  <div class="textinokmail-carousel-bg">
+    <div class="testinomail-content">
+
+     <div class="textinokmail-arrow left" onclick="prevTestimonial()">&#10094;</div>
+    <div class="textinokmail-arrow right" onclick="nextTestimonial()">&#10095;</div>
+
+    <div class="textinokmail-carousel-container" id="textinokmail-carousel">
+      <div class="textinokmail-quote-left">
+        <img src="./public/image.png" alt="">
+      </div>
+      <div class="textinokmail-quote-right"><img src="./public/image1.png" alt=""></div>
+
+      <p class="textinokmail-carousel-text" id="testimonial-text"></p>
+
+      <div class="textinokmail-profile">
+        <img id="testimonial-img" />
+        <div>
+          <div class="textinokmail-name" id="testimonial-name"></div>
+          <div class="textinokmail-title" id="testimonial-title"></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+
+
+
+
+
 
     <section>
 
@@ -550,6 +585,49 @@
   </script>
 
 
+
+<!-- testinoamil -->
+ <script>
+    const testimonials = [
+      {
+        name: 'Biru Kumar',
+        title: 'VP of Engineering',
+        image: 'https://randomuser.me/api/portraits/men/75.jpg',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae quam non turpis finibus suscipit. Nulla facilisi. Aenean euismod, sapien a tempor fermentum, enim nisl commodo elit, sed imperdiet nibh turpis non odio. Curabitur eu dignissim turpis. Sed convallis arcu nec metus egestas, non gravida velit feugiat.'
+      },
+      {
+        name: 'Sara Lee',
+        title: 'Product Designer',
+        image: 'https://randomuser.me/api/portraits/women/65.jpg',
+        text: 'Aenean vitae arcu porta, tincidunt metus at, feugiat lacus. Nulla eget est vitae metus rhoncus accumsan. Cras fringilla, massa vel varius tempor, libero felis bibendum enim, eget bibendum elit sem sed urna.'
+      }
+    ];
+
+    let currentIndex3 = 0;
+
+    function renderTestimonial(index) {
+      document.getElementById('testimonial-text').textContent = testimonials[index].text;
+      document.getElementById('testimonial-name').textContent = testimonials[index].name;
+      document.getElementById('testimonial-title').textContent = testimonials[index].title;
+      document.getElementById('testimonial-img').src = testimonials[index].image;
+    }
+
+    function prevTestimonial() {
+      currentIndex3 = (currentIndex3 - 1 + testimonials.length) % testimonials.length;
+      renderTestimonial(currentIndex3);
+    }
+
+    function nextTestimonial() {
+      currentIndex3 = (currentIndex3 + 1) % testimonials.length;
+      renderTestimonial(currentIndex3);
+    }
+
+    // Initial render
+    renderTestimonial(currentIndex3);
+  </script>
+
+
+<!-- team -->
     <script>
         const slide = document.getElementById('carouselSlide');
         const totalItems = 4;
@@ -570,6 +648,27 @@
         }
     </script>
 
+
+<!-- testinomial -->
+ <script>
+        const slide2 = document.getElementById('carouselSlide1');
+        const totalItems2 = 4;
+        let currentIndex2 = 0;
+
+        function updateSlide1() {
+            slide1.style.transform = `translateX(-${currentIndex2 * 100}%)`;
+        }
+
+        function nextSlide1() {
+            currentIndex2 = (currentIndex2 + 1) % totalItems2;
+            updateSlide1();
+        }
+
+        function prevSlide1() {
+            currentIndex2 = (currentIndex2 - 1 + totalItems2) % totalItems2;
+            updateSlide1();
+        }
+    </script>
 
 
 

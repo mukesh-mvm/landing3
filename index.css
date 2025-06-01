@@ -209,7 +209,7 @@ text-align: left;
 .hero-left {
   width: 70%;
   height: 70vh; /* Or set a height you need */
-  background: url('./public//bghero.jpg') no-repeat center center;
+  background: url('./public//bghero1.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
   display: flex;
@@ -602,8 +602,8 @@ color: white;
 /* form section */
 .gettouch-contact-wrapper {
   display: flex;
-  min-height: 70vh;
-  background-image: url('./public/form.jpg');
+  min-height: 90vh;
+  background-image: url('./public/form1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1172,4 +1172,139 @@ line-height: 24px; /* 150% */ font-size: 14px;
 
 
     /* testinomial */
+.textinokmail-section {
+      background-color: #ffffff;
+      padding: 0px 20px;
+      text-align: center;
+      padding-top: 20px;
+    }
 
+
+    .testinomail-content{
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+    }
+    .textinokmail-section h2 {
+      font-size: 24px;
+      color: #f25529;
+      /* border-bottom: 2px solid #f25529; */
+      display: inline-block;
+      margin-bottom: 40px;
+    }
+
+    .textinokmail-carousel-bg {
+      background: linear-gradient(to right, #fafafa, #eaf2f8);
+      padding: 0px 20px;
+      position: relative;
+      margin-bottom: 50px;
+    }
+
+    .textinokmail-carousel-container {
+      /* max-width: 800px; */
+      margin: auto;
+      background: #ffffff;
+      border: 4px solid black;
+      border-radius: 16px;
+      padding: 40px 20px;
+      position: relative;
+      text-align: center;
+    }
+
+    .textinokmail-quote-left,
+    .textinokmail-quote-right {
+      font-size: 30px;
+      color: black;
+      position: absolute;
+    }
+
+    .textinokmail-quote-left {
+      top: -20px;
+      left: 20px;
+    }
+
+    .textinokmail-quote-right {
+      bottom: -20px;
+      right: 20px;
+    }
+
+    .textinokmail-carousel-text {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .textinokmail-profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .textinokmail-profile img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .textinokmail-name {
+      font-weight: bold;
+    }
+
+    .textinokmail-title {
+      font-size: 14px;
+      color: gray;
+    }
+
+    .textinokmail-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: white;
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .textinokmail-arrow.left {
+      left: -100px;
+    }
+
+    .textinokmail-arrow.right {
+      right: -100px;
+    }
+
+    @media (max-width: 600px) {
+      .textinokmail-carousel-container {
+        padding: 30px 15px;
+      }
+
+      .textinokmail-carousel-text {
+        font-size: 14px;
+      }
+
+       .textinokmail-arrow.left {
+      left: 20px;
+    }
+
+    .textinokmail-arrow.right {
+      right: 20px;
+    }
+
+      .textinokmail-arrow {
+      position: absolute;
+      top: 80%;
+      transform: translateY(-50%);
+      background: rgb(216, 104, 104);
+      border-radius: 50%;
+      border: 1px solid #ddd;
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+    }
