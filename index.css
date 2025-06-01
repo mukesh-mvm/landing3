@@ -83,6 +83,12 @@ font-weight: 600;
 line-height: normal;
 letter-spacing: 0.48px;
 text-transform: uppercase;
+cursor: pointer;
+}
+
+
+.button:hover{
+  background-color: #d3541d !important;
 }
 
 
@@ -970,10 +976,22 @@ width: 90%;
   font-size: 35px;
   color: #0056a1;
   font-weight: 600;
-  border-bottom: 3px solid #0056a1;
+  /* border-bottom: 3px solid #0056a1; */
   padding-bottom: 2px;
   margin-top: 5px;
   margin-bottom: 10px;
+  position: relative;
+}
+
+
+.gettouch-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust to control distance from text */
+  left: 0;
+  width: 70px; /* Line width */
+  height: 3px;
+  background: #0056a1;
 }
 
 .gettouch-footer-box p {
@@ -1045,7 +1063,20 @@ font-weight: 600;
 line-height: normal;
 margin: 0px;
 padding: 0px;
+position: relative;
 
+}
+
+
+
+.call-conatiner h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjust to control distance from text */
+  left: 0;
+  width: 70px; /* Line width */
+  height: 3px;
+  background: #0E64AD;
 }
 .call-conatiner button{
 display: flex;
