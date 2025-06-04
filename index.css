@@ -102,6 +102,7 @@ cursor: pointer;
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .homecare-logo img {
@@ -113,6 +114,15 @@ cursor: pointer;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+}
+
+
+@media (max-width:768px) {
+
+  .homecare-contact-buttons{
+    display: none;
+  }
+  
 }
 
 .homecare-btn {
@@ -191,7 +201,7 @@ width: 80%;
 
 }
 
-.hero-text h4{
+.hero-text h1{
   color: #ECECEC;
 font-size: 40px;
 font-style: normal;
@@ -261,7 +271,7 @@ text-align: left;
 
 .hero-left {
   width:100%;
-  height: 60vh; /* Or set a height you need */
+  height: 40vh; /* Or set a height you need */
   background: url('./public//bghero.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
@@ -278,6 +288,19 @@ text-align: left;
 .hero-text h4{
   font-size: 25px;
 }
+
+
+.hero-text h1{
+  font-size: 25px;
+}
+
+.hero-left::after {
+    content: none;
+  }
+
+  .hero-text p{
+    font-size: 15px;
+  }
     
 }
 
@@ -303,7 +326,7 @@ text-align: left;
       padding: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
       transition: transform 0.3s ease, background-color 0.3s ease;
-      height: 240px;
+      height: 250px;
       padding-top: 40px;
     }
 
@@ -940,6 +963,10 @@ width: 90%;
         top: auto;
         bottom: -20px;
       }
+
+      .team{
+        display: none;
+      }
     }
 
 
@@ -1405,4 +1432,102 @@ line-height: 24px; /* 150% */ font-size: 14px;
 
     .textinokmail-hidden {
       display: none;
+    }
+
+
+    /* stricky button */
+
+
+    .sticky-icons-container {
+      position: fixed;
+      bottom: -60vh;
+      right: 20px;
+      display: flex;
+      gap: 20px;
+      z-index: 999;
+      height: 90vh;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+      .sticky-icons-container {
+        flex-direction: row;
+        align-items: center;
+        bottom: 10px;
+        height: auto;
+      }
+    }
+
+
+    .sticky-icons-container1 {
+     display: none;
+      /* flex-direction: column; */
+    }
+
+    @media (max-width: 768px) {
+      .sticky-icons-container1 {
+        flex-direction: row;
+        align-items: center;
+        bottom: 10px;
+        height: auto;
+      }
+    }
+
+    .icon-wrapper {
+      background-color: #ffffff;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease;
+    }
+
+    .icon-wrapper:hover {
+      transform: scale(1.1);
+    }
+
+    .icon-wrapper img {
+      width: 30px;
+      height: 30px;
+    }
+
+    @media (max-width: 480px) {
+      .icon-wrapper {
+        width: 50px;
+        height: 50px;
+      }
+
+      .icon-wrapper img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+
+    /* nav button */
+
+    .mobilebutton{
+      display: none;
+      gap: 20px;
+      
+    }
+
+    @media (max-width:768px) {
+
+      .homecare-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row !important;
+      }
+
+       .mobilebutton{
+      display: flex;
+      gap: 20px;
+      
+    }
+      
     }
